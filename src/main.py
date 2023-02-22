@@ -24,7 +24,15 @@ class Cod(QMainWindow):
         self.setWindowTitle("RandDrop")
         self.set_pixmap()
         self.randomize.clicked.connect(self.check_position)
-        
+        self.contract_button.clicked.connect(self.set_contract_text)
+        self.challenge_button.clicked.connect(self.set_challenge_text)
+
+    def set_contract_text(self):
+        self.textBrowser.setText("Coming soon...")
+
+    def set_challenge_text(self):
+        self.textBrowser.setText("Coming soon...")
+
     def set_pixmap(self):
         art = QPixmap(self.picture)
         self.label.setPixmap(art)

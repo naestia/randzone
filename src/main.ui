@@ -194,7 +194,7 @@
                  <number>0</number>
                 </property>
                 <item row="1" column="1">
-                 <widget class="QPushButton" name="pushButton">
+                 <widget class="QPushButton" name="challenge_button">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
@@ -240,7 +240,7 @@ QPushButton:pressed {
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QPushButton" name="pushButton_2">
+                 <widget class="QPushButton" name="contract_button">
                   <property name="minimumSize">
                    <size>
                     <width>100</width>
