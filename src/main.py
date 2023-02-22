@@ -28,9 +28,11 @@ class Cod(QMainWindow):
         self.challenge_button.clicked.connect(self.set_challenge_text)
 
     def set_contract_text(self):
-        self.textBrowser.setText("Coming soon...")
+        self.label_3.setText(f" - {contracts[randint(0, 3)]}")
 
     def set_challenge_text(self):
+        self.textBrowser.setTextColor(QColor(160, 160, 160))
+        self.textBrowser.setFontPointSize(12)
         self.textBrowser.setText("Coming soon...")
 
     def set_pixmap(self):
