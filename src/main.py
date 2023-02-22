@@ -21,10 +21,10 @@ class Cod(QMainWindow):
         self.picture = os.path.join(album_art_dir, "al-mazra-grid.jpg")
         ui_path = os.path.dirname(os.path.abspath(__file__))
         uic.loadUi(os.path.join(ui_path, "main.ui"), self)
+        self.setWindowTitle("RandDrop")
         self.set_pixmap()
         self.randomize.clicked.connect(self.check_position)
         
-
     def set_pixmap(self):
         art = QPixmap(self.picture)
         self.label.setPixmap(art)
@@ -45,7 +45,7 @@ class Cod(QMainWindow):
         self.set_pixmap()
         canvas = self.label.pixmap()
         painter = QPainter(canvas)
-        painter.setBrush(QColor(0, 150, 0, 127))
+        painter.setBrush(QColor(133, 183, 62, 127))
         painter.drawRect(pos[0], pos[1], 80, 80)
         painter.end()
         self.label.setPixmap(canvas)
