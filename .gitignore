@@ -4,3 +4,4 @@ build
 __pycache__/
 push.sh
 dev-notes*
+test-*
