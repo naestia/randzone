@@ -17,7 +17,7 @@ jobs:
           repository: naestia/randzone
           path: .
           
-      - name: Debug
+      - name: Run flake8
         shell: bash
-        run: ls -al
+        run: flake8 -v
 
