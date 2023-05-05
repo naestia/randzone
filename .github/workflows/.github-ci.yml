@@ -1,0 +1,22 @@
+name: Simple flake8
+
+on: workflow_dispatch
+
+jobs:
+  Flake8-test:
+    name: Install & run flake8 test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dib
+        shell: bash
+        run: sudo apt update && apt install flake8
+
+      - name: Clone repo
+        shell: bash
+        run: |
+          git clone git@github.com:naestia/randzone.git
+      
+      - name: Run flake8
+        shell: bash
+        run: cd randzone && flake8 -v
+
