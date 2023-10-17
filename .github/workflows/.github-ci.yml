@@ -1,11 +1,16 @@
 name: Simple flake8
 
-on: workflow_dispatch
+on:
+  pull_request:
+    branches: [master]
+    types: [ready_for_review]
+    
 
 jobs:
   Flake8-test:
     name: Install & run flake8 test
     runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
     steps:
       - name: Install dib
         shell: bash
