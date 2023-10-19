@@ -1,16 +1,14 @@
 name: Simple flake8
 
 on:
-  pull_request:
+  push:
     branches: [master]
-    types: [ready_for_review]
     
 
 jobs:
   Flake8-test:
     name: Install & run flake8 test
     runs-on: ubuntu-latest
-    if: github.event.pull_request.draft == false
     steps:
       - name: Install dib
         shell: bash
