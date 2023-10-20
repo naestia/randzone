@@ -3,24 +3,16 @@ name: Simple flake8
 on:
   push:
     branches: [master]
-    
 
 jobs:
-  Flake8-test:
-    name: Install & run flake8 test
-    runs-on: ubuntu-latest
+  Test-Windows-Server:
+    name: Test Windows Server
+    runs-on: windows-latest
     steps:
-      - name: Install dib
-        shell: bash
-        run: sudo apt update && sudo apt install flake8
+      - name: Install Wix v4
+        shell: powershell
+        run: dotnet tool install --global wix
 
-      - name: Checkout repo
-        uses: actions/checkout@v3
-        with:
-          repository: naestia/randzone
-          path: .
-          
-      - name: Run flake8
-        shell: bash
-        run: flake8 -v
-
+      - name: Test Wix Version
+        shell: powershell
+        run: wix --version
